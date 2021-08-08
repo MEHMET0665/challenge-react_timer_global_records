@@ -34,7 +34,7 @@ function Timer() {
     if (isActive && counter>0) {
       interval = setInterval(() => {
         setCounter(counter => counter - 1);
-      }, 100);
+      }, 1000);
     } else if ( counter!== 0) {
       clearInterval(interval);
     }
