@@ -46,7 +46,7 @@ function Timer() {
       <h1>Timer</h1>
 
       <div className="aura-page-content">
-        <div className="aura-timer-clock">{counter==60?'1:00 min':counter+' s'}</div>
+        <div className="aura-timer-clock">{counter==60?'1:00 min':'0:'+counter+' s'}</div>
         {counter <= 0 ? <Expired /> : null}
 
         <div className="aura-timer-buttons">
