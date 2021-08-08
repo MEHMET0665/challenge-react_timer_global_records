@@ -18,7 +18,7 @@ function Expired() {
 // Component
 function Timer() {
   // Hooks - state
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState(60);
   const [isActive, setIsActive] = useState(false);
 
   // TODO: implement counter...
