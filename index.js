@@ -1,6 +1,6 @@
 // Globals
 import "./styles.scss";
-import React, { useState } from "react";
+import React, { useState, useEffect} from "react";
 
 // Components
 import { Button } from "components/Button";
@@ -29,6 +29,17 @@ function Timer() {
     setCounter(60);
     setIsActive(false)
    }
+   useEffect(() => {
+    let interval = null;
+    if (isActive && counter>0) {
+      interval = setInterval(() => {
+        setCounter(counter => counter - 1);
+      }, 100);
+    } else if ( counter!== 0) {
+      clearInterval(interval);
+    }
+    return () => clearInterval(interval);
+  }, [isActive, counter]);
   // Render
   return (
     <div className="aura-page aura-timer">
