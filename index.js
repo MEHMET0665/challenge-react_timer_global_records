@@ -46,12 +46,12 @@ function Timer() {
       <h1>Timer</h1>
 
       <div className="aura-page-content">
-        <div className="aura-timer-clock">0:00</div>
+        <div className="aura-timer-clock">{counter==60?'1:00 min':counter+' s'}</div>
         {counter <= 0 ? <Expired /> : null}
 
         <div className="aura-timer-buttons">
-          <Button>Start</Button>
-          <Button>Reset</Button>
+          <Button onClick={handleClick}>Start</Button>
+          <Button onClick={reset}>Reset</Button>
         </div>
       </div>
     </div>
