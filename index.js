@@ -19,9 +19,16 @@ function Expired() {
 function Timer() {
   // Hooks - state
   const [counter, setCounter] = useState(0);
+  const [isActive, setIsActive] = useState(false);
 
   // TODO: implement counter...
-
+  function handleClick() {
+    setIsActive(true);
+  }
+   function reset() {
+    setCounter(60);
+    setIsActive(false)
+   }
   // Render
   return (
     <div className="aura-page aura-timer">
